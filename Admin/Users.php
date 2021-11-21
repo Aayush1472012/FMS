@@ -35,7 +35,7 @@ if ($_SESSION['is_adminlogin']) {
             echo '<td>' . $row["u_name"] . '</td>';
             echo '<td>' . $row["u_email"] . '</td>';
             echo '<td><form action="edituser.php" method="POST" class="d-inline"> <input type="hidden" name="id" value=' . $row["u_login_id"] . '><button type="submit" class="btn btn-primary mr-3" name="view" value="View"><i class="fas fa-pen"></i></button></form>  
-    <form action="" method="POST" class="d-inline"><input type="hidden" name="id" value=' . $row["u_login_id"] . '><button type="submit" class="btn btn-secondary" name="delete" value="Delete"><i class="far fa-trash-alt"></i></button></form></td>
+    <form action="" method="POST" class="d-inline"><input type="hidden" name="id" value=' . $row["u_login_id"] . '><button type="submit" class="btn btn-danger" name="delete" value="Delete"><i class="far fa-trash-alt"></i></button></form></td>
    </tr>';
         }
 
@@ -57,7 +57,7 @@ if ($_SESSION['is_adminlogin']) {
     ?>
 </div>
 </div>
-<div><a class="btn box text-primary"  style="background-color:#DCDCDC;" href="adduser.php"><i class="fas fa-plus fa-2x"></i></a>
+<div><a class="btn box text-primary"  style="background-color:#DCDCDC; bottom:50px;" href="adduser.php"><i class="fas fa-plus fa-2x"></i></a>
 </div>
 </div>
 <?php

@@ -27,10 +27,21 @@ if ($_SESSION['is_login']) {
             echo '<div class="alert alert-dark mt-4" role="alert">
             Enter request ID !!! </div>';
         } else {
-            $sql = "SELECT * FROM assignwork_tb WHERE request_id = {$_REQUEST['checkid']}";
+            $sql = "SELECT * FROM assignwork_tb WHERE (request_id = {$_REQUEST['checkid']}) AND (user_email = '$uEmail')";
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();
-            if (($row['request_id']) == $_REQUEST['checkid']) { ?>
+            if (($row) == null) {
+                $sql = "SELECT * FROM submitrequest_tb WHERE (request_id = {$_REQUEST['checkid']}) AND (user_email = '$uEmail')";
+                $result = $conn->query($sql);
+                $row = $result->fetch_assoc();
+                if ($row == null) {
+                    echo '<div class="alert alert-danger mt-4" role="alert">
+                Not found !!! </div>';
+                } else if (($row['request_id']) == $_REQUEST['checkid']) {
+                    echo '<div class="alert alert-dark mt-4" role="alert">
+                Your Request is Still Pending </div>';
+                }
+            } else if (($row['request_id']) == $_REQUEST['checkid']) { ?>
                 <h3 class="text-center mt-5">Assigned Work Details</h3>
                 <table class="table table-bordered">
                     <tbody>
@@ -151,10 +162,7 @@ if ($_SESSION['is_login']) {
                     <form class="d-print-none d-inline" action="CheckStatus.php"><input class="btn btn-secondary" type="submit" value="Close"></form>
                 </div>
     <?php
-            } else {
-                echo '<div class="alert alert-dark mt-4" role="alert">
-      Your Request is Still Pending </div>';
-            }
+            } 
         }
     }
     ?>

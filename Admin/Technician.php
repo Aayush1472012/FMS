@@ -37,7 +37,7 @@ if ($_SESSION['is_adminlogin']) {
             echo '<td>' . $row["empCity"] . '</td>';
             echo '<td>' . $row["empMobile"] . '</td>';
             echo '<td>' . $row["empEmail"] . '</td>';
-            echo '<td><form action="edittech.php" method="POST" class="d-inline"> <input type="hidden" name="id" value=' . $row["empid"] . '><button type="submit" class="btn btn-primary mr-3" name="view" value="View"><i class="fas fa-pen"></i></button></form>  <form action="" method="POST" class="d-inline"><input type="hidden" name="id" value=' . $row["empid"] . '><button type="submit" class="btn btn-secondary" name="delete" value="Delete"><i class="far fa-trash-alt"></i></button></form></td>
+            echo '<td><form action="edittech.php" method="POST" class="d-inline"> <input type="hidden" name="id" value=' . $row["empid"] . '><button type="submit" class="btn btn-primary mr-3" name="view" value="View"><i class="fas fa-pen"></i></button></form>  <form action="" method="POST" class="d-inline"><input type="hidden" name="id" value=' . $row["empid"] . '><button type="submit" class="btn btn-danger" name="delete" value="Delete"><i class="far fa-trash-alt"></i></button></form></td>
    </tr>';
         }
 
@@ -59,7 +59,7 @@ if ($_SESSION['is_adminlogin']) {
     ?>
 </div>
 </div>
-<div><a class="btn text-primary box"  style="background-color:#DCDCDC;" href="addtech.php"><i class="fas fa-plus fa-2x"></i></a>
+<div><a class="btn text-primary box" style="background-color:#DCDCDC; bottom:50px;" href="addtech.php"><i class="fas fa-plus fa-2x"></i></a>
 </div>
 </div>
 

@@ -22,7 +22,7 @@ if ($_SESSION['is_adminlogin']) {
                 <input type="date" class="form-control" id="enddate" name="enddate">
             </div>
             <div class="form-group mt-2">
-                <input type="submit" class="btn btn-success" name="searchsubmit" value="Search">
+                <input type="submit" class="btn btn-secondary" name="searchsubmit" value="Search">
             </div>
         </div>
     </form>

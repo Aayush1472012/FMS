@@ -43,7 +43,7 @@ if ($_SESSION['is_adminlogin']) {
         <td>' . $row["psellingcost"] . '</td>
         <td>
           <form action="editproduct.php" method="POST" class="d-inline"> <input type="hidden" name="id" value=' . $row["pid"] . '><button type="submit" class="btn btn-primary" name="view" value="View"><i class="fas fa-pen"></i></button></form>  
-          <form action="" method="POST" class="d-inline"><input type="hidden" name="id" value=' . $row["pid"] . '><button type="submit" class="btn btn-secondary" name="delete" value="Delete"><i class="far fa-trash-alt"></i></button></form>
+          <form action="" method="POST" class="d-inline"><input type="hidden" name="id" value=' . $row["pid"] . '><button type="submit" class="btn btn-danger" name="delete" value="Delete"><i class="far fa-trash-alt"></i></button></form>
           <form action="sellproduct.php" method="POST" class="d-inline"><input type="hidden" name="id" value=' . $row["pid"] . '><button type="submit" class="btn btn-success" name="issue" value="Issue"><i class="fas fa-handshake"></i></button></form>
         </td>
       </tr>';
@@ -66,7 +66,7 @@ if ($_SESSION['is_adminlogin']) {
     ?>
 </div>
 </div>
-<a class="btn text-primary box"  style="background-color:#DCDCDC;" href="addproduct.php"><i class="fas fa-plus fa-2x"></i></a>
+<a class="btn text-primary box"  style="background-color:#DCDCDC; bottom:50px;" href="addproduct.php"><i class="fas fa-plus fa-2x"></i></a>
 </div>
 
 

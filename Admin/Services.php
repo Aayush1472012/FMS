@@ -32,10 +32,10 @@ if ($_SESSION['is_adminlogin']) {
             echo '<tr>
         <th scope="row">' . $row["sid"] . '</th>
         <td>' . $row["sname"] . '</td>
-        <td>Rs. ' . $row["smincost"] . '-' . $row["smaxcost"] . '</td>
+        <td>Rs. ' . $row["smincost"] . ' - ' . $row["smaxcost"] . '</td>
         <td>
           <form action="editservice.php" method="POST" class="d-inline"> <input type="hidden" name="id" value=' . $row["sid"] . '><button type="submit" class="btn btn-primary" name="view" value="View"><i class="fas fa-pen"></i></button></form>  
-          <form action="" method="POST" class="d-inline"><input type="hidden" name="id" value=' . $row["sid"] . '><button type="submit" class="btn btn-secondary" name="delete" value="Delete"><i class="far fa-trash-alt"></i></button></form>
+          <form action="" method="POST" class="d-inline"><input type="hidden" name="id" value=' . $row["sid"] . '><button type="submit" class="btn btn-danger" name="delete" value="Delete"><i class="far fa-trash-alt"></i></button></form>
           </td>
       </tr>';
         }
@@ -57,7 +57,7 @@ if ($_SESSION['is_adminlogin']) {
     ?>
 </div>
 </div>
-<a class="btn text-primary box"  style="background-color:#DCDCDC;" href="addservice.php"><i class="fas fa-plus fa-2x"></i></a>
+<a class="btn text-primary box"  style="background-color:#DCDCDC; bottom:50px;" href="addservice.php"><i class="fas fa-plus fa-2x"></i></a>
 </div>
 
 

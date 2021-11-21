@@ -67,7 +67,7 @@
         Abc Complex, <br>
         XYZ - 363040 <br>
         Phone: +919999999999 <br>
-        <a href="#" target="_blank">www.osms.com</a> <br>
+        <a href="#" target="_blank">www.ajs.com</a> <br>
       </div> <!-- End Contact Us 2nd Column-->
     </div> <!-- End Contact Us Row-->
   </div> <!-- End Contact Us Container-->

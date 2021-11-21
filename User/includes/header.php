@@ -48,7 +48,7 @@
                                     echo 'style="background-color:wheat;"';
                                   } ?> href="SubmitRequest.php">
                 <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                Submit Request
+                Raise Request for Service
               </a>
             </li>
             <li class="nav-item">
@@ -56,7 +56,7 @@
                                     echo 'style="background-color:wheat;"';
                                   } ?> href="RequestList.php">
                 <i style="font-size:18px" class="fa">&#xf0ae;</i>
-                Request List
+                View Request List
               </a>
             </li>
             <li class="nav-item">
@@ -64,7 +64,7 @@
                                     echo 'style="background-color:wheat;"';
                                   } ?> href="ServiceList.php">
                 <i style="font-size:18px" class="fa">&#xf0ae;</i>
-                Service List
+                View Service List
               </a>
             </li>
             <li class="nav-item">
@@ -72,7 +72,7 @@
                                     echo 'style="background-color:wheat;"';
                                   } ?> href="CheckStatus.php">
                 <i style='font-size:18px' class='far'>&#xf15c;</i>
-                Check Service Status
+                Track Service Status
               </a>
             </li>
             <li class="nav-item">

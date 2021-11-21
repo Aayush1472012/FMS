@@ -135,8 +135,8 @@ if (isset($_SESSION['is_adminlogin'])) {
         </tbody>
     </table>
     <div class="text-center" style="margin-bottom: 80px;">
-        <form class="d-print-none d-inline mr-3"><input class="btn btn-danger" type="submit" value="Print" onClick="window.print()"></form>
-        <form class="d-print-none d-inline" action="work.php"><input class="btn btn-secondary" type="submit" value="Close"></form>
+        <form class="d-print-none d-inline mr-3"><input class="btn btn-success" type="submit" value="Print" onClick="window.print()"></form>
+        <form class="d-print-none d-inline" action="work.php"><input class="btn btn-danger" type="submit" value="Close"></form>
     </div>
 </div>
 

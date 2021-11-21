@@ -10,15 +10,19 @@ if ($_SESSION['is_adminlogin']) {
     echo "<script> location.href='AdminLogin.php'; </script>";
 }
 
-$sql = "SELECT max(request_id) FROM submitrequest_tb";
+$sql = "SELECT * FROM submitrequest_tb";
 $result = $conn->query($sql);
-$row = mysqli_fetch_row($result);
-$submitrequest = $row[0] == 0 ? 0: $row[0];
+$submitrequest = 0;
+while($row = $result->fetch_assoc()){
+    $submitrequest++;
+}
 
 $sql = "SELECT max(rno) FROM assignwork_tb";
 $result = $conn->query($sql);
-$row = mysqli_fetch_row($result);
-$assignwork = $row[0] == 0 ? 0: $row[0];
+$assignwork = 0;
+while($row = $result->fetch_assoc()){
+    $assignwork++;
+}
 
 $sql = "SELECT * FROM technician_tb";
 $result = $conn->query($sql);
@@ -31,7 +35,7 @@ $totaltech = $result->num_rows;
     <div class="row mx-5 text-center">
         <div class="col-sm-4 mt-5">
             <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-                <div class="card-header">Requests Received</div>
+                <div class="card-header">Service Request Received</div>
                 <div class="card-body">
                     <h4 class="card-title">
                         <?php echo $submitrequest; ?>
@@ -42,7 +46,7 @@ $totaltech = $result->num_rows;
         </div>
         <div class="col-sm-4 mt-5">
             <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                <div class="card-header">Assigned Work</div>
+                <div class="card-header">Assigned Technician for Requests</div>
                 <div class="card-body">
                     <h4 class="card-title">
                         <?php echo $assignwork; ?>
@@ -52,8 +56,8 @@ $totaltech = $result->num_rows;
             </div>
         </div>
         <div class="col-sm-4 mt-5">
-            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-                <div class="card-header">No. of Technician</div>
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">No. of Technicians</div>
                 <div class="card-body">
                     <h4 class="card-title">
                         <?php echo $totaltech; ?>
@@ -65,7 +69,7 @@ $totaltech = $result->num_rows;
     </div>
     <div class="mx-5 mt-5 text-center">
         <!--Table-->
-        <p class=" bg-dark text-white p-2">List of Requesters</p>
+        <p class=" bg-dark text-white p-2">List of Users</p>
         <?php
         $sql = "SELECT * FROM userlogin_tb";
         $result = $conn->query($sql);
@@ -73,9 +77,9 @@ $totaltech = $result->num_rows;
             echo '<table class="table">
   <thead>
    <tr>
-    <th scope="col">Requester ID</th>
-    <th scope="col">Name</th>
-    <th scope="col">Email</th>
+    <th scope="col">User ID</th>
+    <th scope="col">User Name</th>
+    <th scope="col">User Email</th>
    </tr>
   </thead>
   <tbody>';

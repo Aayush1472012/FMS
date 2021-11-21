@@ -10,9 +10,16 @@ if ($_SESSION['is_login']) {
     echo "<script> location.href='UserLogin.php'; </script>";
 }
 
+$sql = "SELECT * FROM userlogin_tb WHERE u_email='$uEmail'";
+$result = $conn->query($sql);
+if ($result->num_rows == 1) {
+    $row = $result->fetch_assoc();
+    $uName = $row["u_name"];
+}
+
 if (isset($_REQUEST['submitrequest'])) {
     // Checking for Empty Fields
-    if (($_REQUEST['requestinfo'] == "") || ($_REQUEST['requestdesc'] == "") || ($_REQUEST['username'] == "") || ($_REQUEST['useradd1'] == "") || ($_REQUEST['useradd2'] == "") || ($_REQUEST['usercity'] == "") || ($_REQUEST['userstate'] == "") || ($_REQUEST['userzip'] == "") || ($_REQUEST['useremail'] == "") || ($_REQUEST['usermobile'] == "") || ($_REQUEST['requestdate'] == "")) {
+    if (($_REQUEST['requestinfo'] == "") || ($_REQUEST['requestdesc'] == "") || ($_REQUEST['useradd1'] == "") || ($_REQUEST['useradd2'] == "") || ($_REQUEST['usercity'] == "") || ($_REQUEST['userstate'] == "") || ($_REQUEST['userzip'] == "") || ($_REQUEST['useremail'] == "") || ($_REQUEST['usermobile'] == "") || ($_REQUEST['requestdate'] == "")) {
         // msg displayed if required field missing
         $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
     } else {
@@ -58,7 +65,7 @@ if (isset($_REQUEST['submitrequest'])) {
         </div>
         <div class="form-group">
             <label for="inputName">Name</label>
-            <input type="text" class="form-control" id="inputName" placeholder="John" name="username">
+            <input type="text" class="form-control" id="inputName" name="username" value="<?php echo $uName; ?>" readonly>
         </div>
         <div class="row">
             <div class="form-group col-md-6">

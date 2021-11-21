@@ -43,11 +43,11 @@ if (isset($_REQUEST['nameupdate'])) {
             <label for="inputEmail">Email</label>
             <input type="email" class="form-control" id="inputEmail" value=" <?php echo $uEmail ?>" readonly>
         </div>
-        <div class="form-group">
+        <div class="form-group mt-1">
             <label for="inputName">Name</label>
             <input type="text" class="form-control" id="inputName" name="uName" value=" <?php echo $uName ?>">
         </div>
-        <button type="submit" class="btn btn-success mt-4" name="nameupdate">Update</button>
+        <button type="submit" class="btn btn-success mt-3" name="nameupdate">Update</button>
         <?php if (isset($passmsg)) {
             echo $passmsg;
         } ?>

@@ -60,7 +60,7 @@
         <div class="carousel-caption d-none d-md-block">
           <h2>Welcome to AJS</h2>
           <p class="font-italic">Customer's Happiness is our Aim</p>
-          <a href="User/login.php" class="btn btn-success mx-2 mt-1 mb-2">Login</a>
+          <a href="User/UserLogin.php" class="btn btn-success mx-2 mt-1 mb-2">Login</a>
           <a href="#registration" class="btn btn-danger mx-2 mt-1 mb-2">Sign Up</a>
         </div>
       </div>
@@ -69,7 +69,7 @@
         <div class="carousel-caption d-none d-md-block">
           <h2>Welcome to AJS</h2>
           <p class="font-italic">Customer's Happiness is our Aim</p>
-          <a href="User/login.php" class="btn btn-success mx-2 mt-1 mb-2">Login</a>
+          <a href="User/UserLogin.php" class="btn btn-success mx-2 mt-1 mb-2">Login</a>
           <a href="#registration" class="btn btn-danger mx-2 mt-1 mb-2">Sign Up</a>
         </div>
       </div>
@@ -78,7 +78,7 @@
         <div class="carousel-caption d-none d-md-block">
           <h2>Welcome to AJS</h2>
           <p class="font-italic">Customer's Happiness is our Aim</p>
-          <a href="User/login.php" class="btn btn-success mx-2 mt-1 mb-2">Login</a>
+          <a href="User/UserLogin.php" class="btn btn-success mx-2 mt-1 mb-2">Login</a>
           <a href="#registration" class="btn btn-danger mx-2 mt-1 mb-2">Sign Up</a>
         </div>
       </div>

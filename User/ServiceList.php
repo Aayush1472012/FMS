@@ -34,7 +34,7 @@ if ($_SESSION['is_login']) {
             echo '<tr>';
             echo '<th scope="row">' . $srno . '</th>';
             echo '<td>' . $row["sname"] . '</td>';
-            echo '<td>Rs. ' . $row["smincost"] . '-' . $row["smaxcost"] . '</td>';
+            echo '<td>Rs. ' . $row["smincost"] . ' - ' . $row["smaxcost"] . '</td>';
         }
         echo '</tbody>
  </table>';

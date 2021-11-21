@@ -42,12 +42,12 @@ if(isset($_REQUEST['passupdate'])){
                     <label for="inputEmail">Email</label>
                     <input type="email" class="form-control" id="inputEmail" value="<?php echo $aEmail ?>" readonly>
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-1">
                     <label for="inputnewpassword">New Password</label>
                     <input type="password" class="form-control" id="inputnewpassword" placeholder="New Password" name="aPassword">
                 </div>
-                <button type="submit" class="btn btn-success mr-4 mt-4" name="passupdate">Update</button>
-                <button type="reset" class="btn btn-secondary mt-4">Reset</button>
+                <button type="submit" class="btn btn-success mr-4 mt-3" name="passupdate">Update</button>
+                <button type="reset" class="btn btn-secondary mt-3">Reset</button>
                 <?php if (isset($passmsg)) {
                     echo $passmsg;
                 } ?>
